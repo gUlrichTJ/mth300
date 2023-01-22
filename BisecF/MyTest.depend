@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1622242502 source:d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"menu.h"
+
+1622237137 source:d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funequadiff.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"funSys.h"
+	"funInterpol.h"
+
+1622516777 source:d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funequat.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"funEquat.h"
+
+1622420509 d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funequat.h
+
+1622159578 source:d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funintegrat.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"funEquat.h"
+
+1622545859 source:d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funinterpol.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"funSys.h"
+
+1620277431 source:d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funsys.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"menu.h"
+	<conio.h>
+	"funSys.h"
+
+1622160759 d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\menu.h
+
+1622546404 source:d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"funEquat.h"
+	"funSys.h"
+	"funInterpol.h"
+	"funEquaDiff.h"
+	"funIntegrat.h"
+	"menu.h"
+	"funSys.h"
+
+1622450382 d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funsys.h
+
+1622451056 d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funinterpol.h
+
+1622237282 d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funequadiff.h
+
+1622160195 d:\cic_cours\programmations_methodiques_mathematiques_avancees\myworks\mytest\funintegrat.h
+
