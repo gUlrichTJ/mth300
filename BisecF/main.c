@@ -38,12 +38,14 @@ double bissection()
 	else if(f(b)==0)
 		printf("\nSolution : %lf\n", b);
 	//S'il n'y a pas de solution dans l'intervalle
-	 if(f(a)*f(b)>0){
+	 if(f(a)*f(b)>0) {
 		printf("\nPas de solution dans cet intervalle \n");
 		//Vérification
 		for(i=a; i<b; i+=0.01)
-			while(f(i)==0){
-				printf("\nSolutions : %lf\n", i);break;}
+			while(f(i)==0) {
+				printf("\nSolutions : %lf\n", i);
+				break;
+			}
 	}
 		//Dans ce cas, il y a une solution dans l'intervalle
 	else
@@ -52,9 +54,10 @@ double bissection()
 		do
 		{
 			Xm = (a+b)/2;
-			if(f(Xm)==0){
+			if(f(Xm)==0) {
 				printf("\nSolution : %lf\n", Xm);
-				break; }
+				break;
+			}
 			else if(f(Xm)*f(a)<0)
 			{
 				//printf("\nSolution dans [%f, %f]", a, Xm);
@@ -65,7 +68,7 @@ double bissection()
 				//printf("\nSolution dans [%f, %f]", Xm, b);
 				a = Xm;
 			}
-			if((b-a)<epta){
+			if((b-a)<epta) {
 				printf("\nLa solution est dans l'intervalle[%f, %f]\n", a, b);
 				break;
 			}
@@ -146,7 +149,7 @@ float Newton()
     scanf("%f", &Xo);
     if(deriveeNewton(Xo)==0)
 		printf("\n%f annule la dérivée. Opération impossible", Xo);
-	else{
+	else {
 		printf("Entrez le nombre maximal d'itérations : ");
 		scanf("%li", &N);
 		do
@@ -175,8 +178,8 @@ float deriveeSecante(float x)
 float Secante()
 {
     float Xo=0, X1 = 0, Xn = 0;
-    long N;
-    int i=0;	//Nombre maximal d'itérations
+    long N;		//Nombre maximal d'itérations
+    int i=0;
     puts("\n#####Méthode de la sécante####\n");
     printf("\nEntrez Xo : ");
     scanf("%f", &Xo);
@@ -203,15 +206,15 @@ void Gauss()
 	double produit=1;
 	int i, j, k, n;
 	//Entrée des éléments
-	do{
+	do {
 		printf("\nEntrez la dimension du tableau : ");
 		scanf("%i", &n);
 	}
 	while (n<2||n>20);
 	//Saisie des éléments
 	puts("\nEntrez les éléments de la matrice ligne par ligne\n");
-	for ( i = 0; i < n; i++){
-		for ( j = 0; j < n; j++){
+	for ( i = 0; i < n; i++) {
+		for ( j = 0; j < n; j++) {
 			printf("Elément[%i][%i] : ", i, j);
 			scanf("%lf", &a[i][j]);
 			u[i][j] = a[i][j];
@@ -228,49 +231,49 @@ void Gauss()
 		produit*=a[i][i];
 	if(produit==0)
 		printf("\nDésolé il y a 0 sur la diagonale\n");
-	else{
-   //Factorisation et descente
-	for(i=0; i<n-1; i++){
-		for(k=i+1; k<n; k++){
-         //if(u[i][i]!=0){
-			l[k][i]=(u[k][i]/u[i][i]);
-		//}
-			for(j=i+1; j<n; j++){
-				u[k][j]-=l[k][i]*u[i][j];
+	else {
+	   //Factorisation et descente
+		for(i=0; i<n-1; i++){
+			for(k=i+1; k<n; k++){
+			 //if(u[i][i]!=0){
+				l[k][i]=(u[k][i]/u[i][i]);
+			//}
+				for(j=i+1; j<n; j++){
+					u[k][j]-=l[k][i]*u[i][j];
+				}
+				y[k]-=l[k][i]*y[i];
 			}
-			y[k]-=l[k][i]*y[i];
 		}
-	}
-	//Remontée
-	x[n-1]=y[n-1]/u[n-1][n-1];
-	for(i=n-2; i>=0; i--){
-		x[i]=y[i];
-		for(j=i+1; j<n; j++){
-			x[i]-=u[i][j]*x[j];
+		//Remontée
+		x[n-1]=y[n-1]/u[n-1][n-1];
+		for(i=n-2; i>=0; i--) {
+			x[i]=y[i];
+			for(j=i+1; j<n; j++) {
+				x[i]-=u[i][j]*x[j];
+			}
+			x[i]=(1/u[i][i])*x[i];
 		}
-		x[i]=(1/u[i][i])*x[i];
-	}
-	//Affichage des matrices
-    puts("\nMatrice triangularisée\n");
-    for(i=0; i<n; i++){
-        for(j=0; j<n; j++)
-			printf("%15lf", u[i][j]);
-      printf("\n");
-	}
-	puts("\nMatrice triangularisée l\n");
-	for(i=0; i<n; i++){
-		for(j=0; j<n; j++)
-			printf("%15lf", l[i][j]);
-      printf("\n");
-	}
-	puts("\nYi\n");
-	for (i=0; i<n; i++){
-		printf("%15lf", y[i]);
-	}
-	puts("\nMatrice solution\n");
-	for(i=0; i<n; i++){
-		printf("%15lf", x[i]);
-	}
+		//Affichage des matrices
+		puts("\nMatrice triangularisée\n");
+		for(i=0; i<n; i++) {
+			for(j=0; j<n; j++)
+				printf("%15lf", u[i][j]);
+		  printf("\n");
+		}
+		puts("\nMatrice triangularisée l\n");
+		for(i=0; i<n; i++){
+			for(j=0; j<n; j++)
+				printf("%15lf", l[i][j]);
+		  printf("\n");
+		}
+		puts("\nYi\n");
+		for (i=0; i<n; i++){
+			printf("%15lf", y[i]);
+		}
+		puts("\nMatrice solution\n");
+		for(i=0; i<n; i++){
+			printf("%15lf", x[i]);
+		}
 	}
 	printf("\n");
 }
@@ -302,26 +305,33 @@ void luCrout()
 		scanf("%lf", &b[I]);
 	}
     //Multiplication des diagonales
-    for(I=0; I<N; I++)
-		for(J=0; J<N; J++)
-			if(I==J)
+    for(I=0; I<N; I++) {
+		for(J=0; J<N; J++) {
+			if(I==J) {
 				produitDiag*=T[I][J];
+			}
+		}
+    }
 	//Si le produit des diagonales est nul, la matrice n'est pas inversible
 	if(produitDiag==0)
 		printf("\nDésolé!! Il y a un zéro sur la diagonale\n");
-	else{
+	else {
 		//Initialisation de la diagonale de U a 1
-		for(I=0; I<N; I++)
-			for(J=0; J<N; J++)
-				if (I==J)
+		for(I=0; I<N; I++) {
+			for(J=0; J<N; J++) {
+				if (I==J) {
 					U[I][J]=1;
+				}
+			}
+		}
 		//Calcul des éléments de la premiere colonne de L
 		for(I=0; I<N; I++)
 			L[I][0]=T[I][0];
 		//Calcul des éléments de la premiere ligne de U
 		for(J=1; J<N; J++)
 			U[0][J]=(T[0][J]/L[0][0]);
-		for(I=1; I<N; I++){
+
+		for(I=1; I<N; I++) {
 			//Calcul du pivot
 			somme=0;
 				for(k=0; k<I-1; k++)
@@ -329,7 +339,7 @@ void luCrout()
 				L[I][I] = T[I][I]-somme;
 			//Merci Seigneur Jesus. Merci beaucoup Seigneur Jesus
 			//Calcul des ième colonnes et lignes
-			for(J=I+1; J<N; J++){
+			for(J=I+1; J<N; J++) {
 				//calcul de la ieme colonne de L
 				somme=0;
 				for (k=0; k<I-1; k++)
@@ -340,7 +350,7 @@ void luCrout()
 				for (k=0; k<I-1; k++)
 					somme+=L[I][k]*U[k][J];
 				U[I][J]=(T[I][J]-somme)/L[I][I];
-			//Ms SJ
+			//Mc SJ
 			}
 		}
 		//Calcul de Lnn
@@ -367,13 +377,13 @@ void luCrout()
 		}
 		//Affichage des matrices
 		puts("\nL");
-		for(I=0; I<N; I++){
+		for(I=0; I<N; I++) {
 			for(J=0; J<N; J++)
 				printf("%15lf", L[I][J]);
 			printf("\n");
 		}
 		puts("\nU");
-		for(I=0; I<N; I++){
+		for(I=0; I<N; I++) {
 			for(J=0; J<N; J++)
 				printf("%15lf", U[I][J]);
 			printf("\n");
@@ -391,21 +401,21 @@ void luCrout()
 ///Doolittle
 #include<stdio.h>
 #include<stdlib.h>
-void luDoolittle(){
+void luDoolittle() {
 	double a[20][20], u[20][20], l[20][20];
 	double b[20], y[20], x[20];
 	double somme=0;
 	int i, j, k, n;
 	//Entree du nombre maximal d'elements
-	do{
+	do {
 		printf("\nEntrez la dimension du tableau : ");
 		scanf("%i", &n);
 	}
 	while (n<2||n>20);
 	//Saisie des elements
 	puts("\nEntrez les elements de la matrice ligne par ligne\n");
-	for ( i = 0; i < n; i++){
-		for ( j = 0; j < n; j++){
+	for ( i = 0; i < n; i++) {
+		for ( j = 0; j < n; j++) {
 			printf("Elément[%i][%i] : ", i, j);
 			scanf("%lf", &a[i][j]);
 			u[i][j]=a[i][j];
@@ -413,41 +423,43 @@ void luDoolittle(){
 	}
 	//Saisie des elements de droite
 	puts("\nEntrez les elements de droite\n");
-	for ( i = 0; i < n; i++){
+	for ( i = 0; i < n; i++) {
 		printf("Elément b%i : ", i);
 		scanf("%lf", &b[i]);
 	}
 	//1 Factorisation
-	for(i=0; i<n-1; i++){
-		for(k=i+1; k<n; k++){
-			if(u[i][i]!=0){
+	for(i=0; i<n-1; i++) {
+		for(k=i+1; k<n; k++) {
+			if(u[i][i]!=0) {
 				l[k][i]=(u[k][i]/u[i][i]);
-				for(j=i+1; j<n; j++){
+				for(j=i+1; j<n; j++) {
 					u[k][j]-=l[k][i]*u[i][j];
 				}
 			}
 		}
 	}
 	//Mettre des 1 sur la diagonale de L
-	for ( i = 0; i < n; i++){
+	for ( i = 0; i < n; i++) {
 		l[i][i]=1;
 	}
 	//Mettre à 0 les éléments de U pour i supérieur à j
-	for (i=0; i<n; i++)
-		for (j = 0; j < n; j++)
-			if (i>j)
+	for (i=0; i<n; i++) {
+		for (j = 0; j < n; j++) {
+			if (i>j) {
 				u[i][j]=0;
-
+			}
+		}
+	}
 	//Descente en calculant y avec Ly=b
-	for(i=0; i<n; i++){
+	for(i=0; i<n; i++) {
 		somme=0;
-		for(k=0; k<i; k++){
+		for(k=0; k<i; k++) {
 			somme+=l[i][k]*y[k];
 		}
 		y[i]=b[i]-somme;
 	}
 	//Remontee on calcule x avec Ux=y
-	for(i=n-1; i>=0; i--){
+	for(i=n-1; i>=0; i--) {
 		somme=0;
 		for(j=i+1; j<n; j++)
 			somme+=u[i][j]*x[j];
@@ -455,21 +467,22 @@ void luDoolittle(){
 	}
 	//Affichage des matrices
 	puts("\nL");
-	for(i=0; i<n; i++){
+	for(i=0; i<n; i++) {
 		for(j=0; j<n; j++)
 			printf("%15lf", l[i][j]);
 		printf("\n");
 	}
 	puts("\nU");
-	for(i=0; i<n; i++){
+	for(i=0; i<n; i++) {
 		for(j=0; j<n; j++)
 			printf("%15lf", u[i][j]);
 		printf("\n");
 	}
+	///Merci Seigneur Jesus-Christ
 	//Affichage des Yi
 	puts("\nYi");
 	for(i=0; i<n; i++)
-			printf("%15lf", y[i]);
+		printf("%15lf", y[i]);
 	//Affichage des solutions
 	puts("\nXi");
 	for(i=0; i<n; i++)
@@ -478,22 +491,22 @@ void luDoolittle(){
 }
 
 ///Lu pivot partiel
-void luPivotPartiel(){
+void luPivotPartiel() {
 	double a[20][20], u[20][20], l[20][20];
 	double b[20], y[20], x[20];
     int t[20];
 	double somme=0, max=0, p=0;
 	int i, j, k, n, ie;
 	//Entree du nombre maximal d'elements
-	do{
+	do {
 		printf("\nEntrez la dimension du tableau : ");
 		scanf("%i", &n);
 	}
-	while (n<2||n>20);
+	while (n<2|| n>20);
 	//Saisie des elements
 	puts("\nEntrez les elements de la matrice ligne par ligne\n");
-	for ( i = 0; i < n; i++){
-		for ( j = 0; j < n; j++){
+	for ( i = 0; i < n; i++) {
+		for ( j = 0; j < n; j++) {
 			printf("Elément[%i][%i] : ", i, j);
 			scanf("%lf", &a[i][j]);
 			u[i][j]=a[i][j];
@@ -501,7 +514,7 @@ void luPivotPartiel(){
 	}
 	//Saisie des elements de droite
 	puts("\nEntrez les elements de droite\n");
-	for ( i = 0; i < n; i++){
+	for ( i = 0; i < n; i++) {
 		printf("Elément b%i : ", i);
 		scanf("%lf", &b[i]);
 	}
@@ -509,7 +522,7 @@ void luPivotPartiel(){
     for(i=0; i<n; i++)
         t[i]=i;
     //Factorisation
-    for(i=0; i<n; i++){
+    for(i=0; i<n; i++) {
         max=a[i][i];
         //Recherche de i*
         for(k=i; k<n; k++){
@@ -527,16 +540,16 @@ void luPivotPartiel(){
             }
         }
         //on modifie les lignes t(k), k>i
-        for(k=i+1; k<n; k++){
+        for(k=i+1; k<n; k++) {
             l[t[k]][i]=(a[t[k]][i]/a[t[i]][i]);
-            for(j=i+1; j<n; j++){
+            for(j=i+1; j<n; j++) {
                 a[t[k]][j]-=l[t[k]][i]*u[t[i]][j];
             }
         }
         //Merci Seigneur Jesus-Christ
     }
     //Descente: on calcule y
-    for(i=0; i<n; i++){
+    for(i=0; i<n; i++) {
         somme=0;
         for(j=0; j<i; j++){
             somme+=l[t[i]][j]*y[j];
@@ -544,23 +557,23 @@ void luPivotPartiel(){
         y[i]=b[t[i]]-somme;
     }
     //Remontee on calcule x
-    for(i=n-1; i>=0; i--){
+    for(i=n-1; i>=0; i--) {
         somme=0;
-        for(j=i; j<n; j++){
+        for(j=i; j<n; j++) {
             somme+=u[t[i]][j]*x[j];
         }
         x[i]=(1/u[t[i]][i])*(y[i]-somme);
     }
     //Affichage des tableaux
     puts("\nTab A\n");
-    for(i=0; i<n; i++){
+    for(i=0; i<n; i++) {
         for(j=0; j<n; j++)
             printf("%14lf", a[i][j]);
         printf("\n");
     }
     printf("\n");
     puts("\nTab U\n");
-    for(i=0; i<n; i++){
+    for(i=0; i<n; i++) {
         for(j=0; j<n; j++)
             printf("%14lf", u[i][j]);
         printf("\n");
