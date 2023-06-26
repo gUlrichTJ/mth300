@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1581595976 source:d:\c_works\algo_num\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<locale.h>
+	<ctype.h>
+	<conio.h>
+	"matrice.h"
+
+1581591562 d:\c_works\algo_num\matrice.h
+
+1581843682 source:d:\c_works\algo_num\matrice.c
+	<stdio.h>
+	<stdlib.h>
+	"matrice.h"
+
+1582215591 source:f:\c_works\algo_num\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<locale.h>
+	<ctype.h>
+	<conio.h>
+	"matrice.h"
+
+1582160447 f:\c_works\algo_num\matrice.h
+
+1582214081 source:f:\c_works\algo_num\matrice.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"matrice.h"
+
+1582210024 source:f:\c_works\algo_num\equa_diff.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+	<ctype.h>
+	"matrice.h"
+
+1582206424 source:e:\c_works\algo_num\equa_diff.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+	<ctype.h>
+	"matrice.h"
+
+1582156847 e:\c_works\algo_num\matrice.h
+
+1582210481 source:e:\c_works\algo_num\matrice.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"matrice.h"
+
+1616440843 source:e:\c_works\algo_num\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<locale.h>
+	<ctype.h>
+	<conio.h>
+	"matrice.h"
+
+1582206424 source:c:\users\asus\desktop\jean_software\cours\mth300\algo_num\equa_diff.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+	<ctype.h>
+	"matrice.h"
+
+1582156847 c:\users\asus\desktop\jean_software\cours\mth300\algo_num\matrice.h
+
+1616440843 source:c:\users\asus\desktop\jean_software\cours\mth300\algo_num\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<locale.h>
+	<ctype.h>
+	<conio.h>
+	"matrice.h"
+
+1582210481 source:c:\users\asus\desktop\jean_software\cours\mth300\algo_num\matrice.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"matrice.h"
+

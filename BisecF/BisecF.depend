@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1649246824 source:/home/gracianomathey/fichiers_codeblocks/mth300/BisecF/main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+
