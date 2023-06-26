@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1634216585 source:/home/gracianomathey/fichiers_codeblocks/schema_hormer/main.c
+	<stdio.h>
+	<stdlib.h>
+

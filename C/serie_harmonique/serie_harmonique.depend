@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1636392157 source:/home/gracianomathey/fichiers_codeblocks/serie_harmonique/main.c
+	<stdio.h>
+	<stdlib.h>
+

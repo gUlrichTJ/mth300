@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1633532679 source:/home/gracianomathey/fichiers_codeblocks/thanksYouLord/main.c
+	<stdio.h>
+	<stdlib.h>
+

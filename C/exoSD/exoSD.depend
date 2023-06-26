@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1647382208 source:/home/gracianomathey/fichiers_codeblocks/exoSD/main.c
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

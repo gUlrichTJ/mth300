@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1649519048 source:/home/gracianomathey/fichiers_codeblocks/INF206_simulSegmentation_v2/simulSegMain.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<curses.h>
+	<curses.h>
+	<locale.h>
+	<stdbool.h>
+

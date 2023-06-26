@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1634128352 source:/home/gracianomathey/fichiers_codeblocks/sum_suite_chiffres/main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+
