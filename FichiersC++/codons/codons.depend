@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1687815360 source:/home/gracianomathey/fichiers_codeblocks/FichiersC++/codons/main.cpp
+	<iostream>
+	<vector>
+
